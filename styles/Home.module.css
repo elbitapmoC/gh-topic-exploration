@@ -47,11 +47,10 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  min-height: 300px;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
+.card:hover{
   color: #0070f3;
   border-color: #0070f3;
 }
@@ -65,6 +64,13 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
 }
 
 .logo {

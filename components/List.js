@@ -1,12 +1,29 @@
-import React from "react";
+import styles from "../styles/Home.module.css";
 
-const Lists = () => {
+const Lists = (prop) => {
   return (
-    <div class="flex justify-center">
-      <ul class="bg-white rounded-lg border border-gray-200 w-96 text-gray-900">
-        <li class="px-6 py-2 border-b border-gray-200 w-full">A</li>
-      </ul>
-    </div>
+    // <aside >
+    //   <h2>Documentation &rarr;</h2>
+    //   <p>Find in-depth information about Next.js features and API.</p>
+    // </aside>
+
+    <article className={styles.grid}>
+      {prop.repos.map((repo) => {
+        return (
+          <aside className={styles.card} key={repo.id}>
+            <h2 className="font-bold">{repo.name}</h2>
+            <p>{repo.description}</p>
+            {/* 
+            stargazerCount 
+            updatedAt
+            forkCount
+            licenseInfo.key
+            repositoryTopics.nodes (map) node topic.name
+            */}
+          </aside>
+        );
+      })}
+    </article>
   );
 };
 
