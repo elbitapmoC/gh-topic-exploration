@@ -1,6 +1,6 @@
 import React from "react";
 
-const ButtonWithBadge = (props) => {
+const ResultsBadge = (props) => {
   return (
     <aside className="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center rounded-lg">
       Results:
@@ -11,4 +11,4 @@ const ButtonWithBadge = (props) => {
   );
 };
 
-export default ButtonWithBadge;
+export default ResultsBadge;

@@ -17,36 +17,68 @@
 - [Github API key](https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql#authenticating-with-graphql)
 - Use the `.env` file within your app.
 
-##### (Use whatever React framework / library. URL routing is optional.)
-
---
-
 ### Evaluation:
 
 - Code organization & overall readability.
 - Unit tests, greatly appreciated.
 - Design will be ignored, however usability & accessibility will be taken into consideration.
-- Leave instructions on how to install, run and test your app.
-- Create a working app & improve it however you see fit.
-- Please reach out per email or by opening an issue if anything is unclear or blocking you
+- Improve it however you see fit.
 
-Best of luck
+## Dev Notes / What we used
 
-## Dev Notes
-
-- Leave any technical notes on any libraries or tools you chose to use, the more detail the better.
+- [Apollo GraphQL](https://www.apollographql.com/)
+  - I'm a bit newer to this, GraphQL this seemed like the best fit for the ask.
+- [NextJS](https://nextjs.org/)
+  - Lots of features
+  - Performance! Performance! Performance!
+  - SEO
+  - Accesibility
+  - plus so much more
+- [React](https://reactjs.org/)
+  - It's react, not much else to say
+- [Tailwind CSS](https://tailwindcss.com/docs/installation)
+  - Utility-first CSS framework
+  - Less time thinking of class names, more time making progress.
+  - Lightweight because it's use what you need, it won't download everything from the framework.
+  - Responsiveness
+  - I believe I have an eye for design. UI 👍
 
 ### How to run app & test
 
-- Leave instruction on how to run and test your app here
+1. Get your Github Token
+   - Profile > Settings > Developer Settings > Personal Access Token > Generate New Token > Enable: public_repo, user:email
+   - Generate Token, **MAKE SURE TO COPY your token!**
+1. Clone the repo: `git clone git@github.com:elbitapmoC/gh-topic-exploration.git`
+1. Open project in terminal or text editor of choice.
+1. Run `npm install`
+1. Create a .env file to access.
+   - At the root create a file > name it: '.env.local'
+   - Update the content in the file to: `GITHUB_ACCESS_TOKEN = "PASTE KEY HERE"`
+   - Save
+1. Run `npm run dev`
+1. Finally, load up `http://localhost:3000` and have fun and enjoy the Github explorer!
 
 ### Future Improvements
 
-Feel free to elaborate on how you would improve any of the following topics
-
-- Code Structuring:
-
-- Refactoring:
-
-- Additional Features:
-# gh-topic-exploration
+- Code Structuring
+- React -> Svelte
+- Refactoring
+  - I'd like to use styled components for component specific styles
+  - and Keep tailwind for those quick on the go class additions.
+- Additional Features (I'd like to recreate Github's full Explorer)
+  - Pagination (Resources below)
+    - https://stackoverflow.com/questions/48116781/github-api-v4-how-can-i-traverse-with-pagination-graphql
+    - https://stackoverflow.com/questions/64115904/how-to-search-specific-page-through-github-api-v4
+    - https://stackoverflow.com/questions/70136467/graphql-api-pagination-issue
+    - https://www.youtube.com/watch?v=_DhYAk4Iy-0
+  - Adding time last updated
+  - No need for design system since Tailwind takes care of this for the most part.
+  - Filtering out what to search by:
+    - Discussions
+    - Marketplace
+    - Wikis
+    - etc.
+  - Filtering by Languages
+  - Add in micro-interactions
+  - Themes to support different color schemes (light or dark)
+- More experimentation and deep dive learning on GraphQL.
