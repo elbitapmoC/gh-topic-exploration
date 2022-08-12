@@ -9,7 +9,6 @@ import GET_REPOS_AND_TOPICS from "../queries/getGithubTopic";
 import client from "../graphql-client";
 
 export default function Home({ data, error }) {
-  console.log(data.search.nodes);
   return (
     <>
       <Heading />
