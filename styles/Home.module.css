@@ -34,10 +34,12 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 720px;
+  width: 100%;
 }
 
 .card {
+  position: relative;
   margin: 1rem;
   padding: 1.5rem;
   text-align: left;
@@ -46,8 +48,8 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-  min-height: 300px;
+  width: 100%;
+  min-height: 200px;
   flex-grow: 1;
 }
 
@@ -63,8 +65,9 @@
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   line-height: 1.5;
+
 
   /* Minimizes rows of text to 3 lines. */
   overflow: hidden;
@@ -74,34 +77,4 @@
            line-clamp: 3; 
    -webkit-box-orient: vertical;
 
-   /* IE Support */
-   display: block;
-   overflow: hidden;
-   max-height: 4.2em;
-   line-height: 1.3em;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
 }

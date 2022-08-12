@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const GET_REPOS_AND_TOPICS = gql`
   query SearchGithub($queryString: String!) {
-    search(query: $queryString, type: REPOSITORY, first: 10) {
+    search(query: $queryString, type: REPOSITORY, first: 12) {
       repositoryCount
       pageInfo {
         hasNextPage
@@ -18,6 +18,10 @@ const GET_REPOS_AND_TOPICS = gql`
           forkCount
           licenseInfo {
             key
+          }
+          primaryLanguage {
+            name
+            color
           }
           repositoryTopics(first: 5) {
             nodes {
