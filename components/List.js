@@ -1,15 +1,30 @@
 import styles from "../styles/Home.module.css";
 
 const Lists = (prop) => {
+  console.log(prop);
   return (
     <article className={styles.grid}>
       {prop.repos.map((repo) => {
         return (
-          <aside className={styles.card} key={repo.id}>
-            <h2 className="font-bold">{repo.name}</h2>
-            <p>{repo.description}</p>
-            <div className="flex absolute bottom-5">
-              <span className="flex items-center">
+          <a
+            href={repo.url}
+            target="_blank"
+            className={`${styles.card} flex flex-col`}
+            key={repo.id}
+          >
+            <aside className=" grow">
+              <h2 className="font-bold">{repo.name}</h2>
+              <p className="pb-2">{repo.description}</p>
+              {repo.repositoryTopics.nodes.map((node) => {
+                return (
+                  <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 p-2.5 py-0.5 rounded">
+                    {node.topic.name}
+                  </span>
+                );
+              })}
+            </aside>
+            <div className="text-sm flex items-center pt-4">
+              <span className="flex items-center pr-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-1"
@@ -26,16 +41,20 @@ const Lists = (prop) => {
                 </svg>
                 {repo.stargazerCount}
               </span>
-              {/* 
-             repositoryTopics.nodes (map) node topic.name
-
-             primaryLanguage.color
-             primaryLanguage.name
-             licenseInfo.key
-             updatedAt
-            */}
+              <span className="flex items-center pr-4">
+                <span
+                  className="w-5 h-5 mr-1 border-2 border-white rounded-full"
+                  style={{
+                    backgroundColor: repo.primaryLanguage?.color
+                      ? repo.primaryLanguage.color
+                      : "",
+                  }}
+                ></span>
+                <span>{repo.primaryLanguage?.name}</span>
+              </span>
+              <span>{repo.licenseInfo?.key} license</span>
             </div>
-          </aside>
+          </a>
         );
       })}
     </article>
