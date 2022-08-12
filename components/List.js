@@ -17,7 +17,10 @@ const Lists = (prop) => {
               <p className="pb-2">{repo.description}</p>
               {repo.repositoryTopics.nodes.map((node) => {
                 return (
-                  <span className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 p-2.5 py-0.5 rounded">
+                  <span
+                    key={node.topic.id}
+                    className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 p-2.5 py-0.5 rounded"
+                  >
                     {node.topic.name}
                   </span>
                 );
