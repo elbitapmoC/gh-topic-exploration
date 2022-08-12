@@ -9,6 +9,7 @@ const Lists = (prop) => {
           <a
             href={repo.url}
             target="_blank"
+            rel="noreferrer"
             className={`${styles.card} flex flex-col`}
             key={repo.id}
           >
