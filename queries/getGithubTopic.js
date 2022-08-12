@@ -15,7 +15,6 @@ const GET_REPOS_AND_TOPICS = gql`
           description
           stargazerCount
           updatedAt
-          forkCount
           licenseInfo {
             key
           }
