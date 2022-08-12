@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 
 const Lists = (prop) => {
   console.log(prop);
+
   return (
     <article className={styles.grid}>
       {prop.repos.map((repo) => {
@@ -46,14 +47,12 @@ const Lists = (prop) => {
                 {repo.stargazerCount}
               </span>
               <span className="flex items-center pr-4">
-                <span
-                  className="w-5 h-5 mr-1 border-2 border-white rounded-full"
-                  style={{
-                    backgroundColor: repo.primaryLanguage?.color
-                      ? repo.primaryLanguage.color
-                      : "",
-                  }}
-                ></span>
+                {repo.primaryLanguage && (
+                  <span
+                    className="w-5 h-5 mr-1 border-2 border-white rounded-full"
+                    style={{ backgroundColor: repo.primaryLanguage.color }}
+                  />
+                )}
                 <span>{repo.primaryLanguage?.name}</span>
               </span>
               <span>{repo.licenseInfo?.key} license</span>
