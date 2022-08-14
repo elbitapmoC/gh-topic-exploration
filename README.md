@@ -1,6 +1,6 @@
 # GitHub Topic Explorer:
 
-![Screen Shot 2022-08-12 at 3 03 29 PM](https://user-images.githubusercontent.com/11306948/184452481-cf388de0-cda8-4572-a636-95385cbfd0d2.png)
+![Screen Shot 2022-08-14 at 4 37 29 AM](https://user-images.githubusercontent.com/11306948/184529196-41151be7-85c9-420f-9909-7d439f07423d.png)
 
 ![Screen Shot 2022-08-12 at 5 21 10 AM](https://user-images.githubusercontent.com/11306948/184452506-e0f5960f-f8f1-4187-8d70-0b94f67462c9.png)
 
