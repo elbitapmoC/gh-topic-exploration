@@ -36,7 +36,6 @@ export async function getServerSideProps(ctx) {
   if (!queryString) {
     return { props: { data: null } };
   }
-  console.log({ queryString });
   try {
     const results = await client.query({
       query: GET_REPOS_AND_TOPICS,
