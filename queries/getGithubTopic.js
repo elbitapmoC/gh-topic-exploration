@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 const GET_REPOS_AND_TOPICS = gql`
   query SearchGithub($queryString: String!) {
-    search(query: $queryString, type: REPOSITORY, first: 84) {
+    search(query: $queryString, type: REPOSITORY, first: 12) {
       repositoryCount
       pageInfo {
         # next
@@ -19,8 +19,6 @@ const GET_REPOS_AND_TOPICS = gql`
           name
           description
           stargazerCount
-          updatedAt
-          forkCount
           licenseInfo {
             key
           }
@@ -28,7 +26,7 @@ const GET_REPOS_AND_TOPICS = gql`
             name
             color
           }
-          repositoryTopics(first: 5) {
+          repositoryTopics(first: 10) {
             nodes {
               topic {
                 name
@@ -37,6 +35,14 @@ const GET_REPOS_AND_TOPICS = gql`
             }
           }
         }
+      }
+    }
+    topic(name: $queryString) {
+      name
+      relatedTopics(first: 10) {
+        id
+        name
+        stargazerCount
       }
     }
   }

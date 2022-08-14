@@ -11,11 +11,11 @@ const Footer = () => {
         <span>
           <Image
             className="w-4 h-4 m-auto mb-4"
-            src="/elbitapmoC.svg"
+            src="/icons/elbitapmoC.svg"
             alt="Logo, Stamping the footer featuring Bazell"
             fill="intrinsic"
-            height={75}
-            width={75}
+            height={55}
+            width={55}
           />
           <p>&copy; elbitapmoC | 2022</p>
         </span>

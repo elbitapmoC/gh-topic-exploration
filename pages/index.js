@@ -4,6 +4,7 @@ import Heading from "../components/Heading";
 import Search from "../components/Search";
 import Title from "../components/Title";
 import List from "../components/List";
+import RelatedTopics from "../components/RelatedTopics";
 // import Pagination from "../components/Pagination";
 import ResultsBadge from "../components/ResultsBadge";
 import GET_REPOS_AND_TOPICS from "../queries/getGithubTopic";
@@ -18,6 +19,7 @@ export default function Home({ data, error }) {
         <Search />
         {data !== null && (
           <>
+            <RelatedTopics topic={data.topic} />
             <ResultsBadge count={data.search.repositoryCount} />
             <List repos={data.search.nodes} />
           </>

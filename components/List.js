@@ -17,16 +17,18 @@ const Lists = (prop) => {
             <aside className=" grow">
               <h2 className="font-bold">{repo.name}</h2>
               <p className="pb-2">{repo.description}</p>
-              {repo.repositoryTopics.nodes.map((node) => {
-                return (
-                  <span
-                    key={node.topic.id}
-                    className="bg-indigo-100 text-indigo-800 text-xs font-semibold mr-2 p-2.5 py-0.5 rounded"
-                  >
-                    {node.topic.name}
-                  </span>
-                );
-              })}
+              <aside className="flex flex-wrap">
+                {repo.repositoryTopics?.nodes.map((node) => {
+                  return (
+                    <span
+                      key={node.topic.id}
+                      className="bg-indigo-100 text-indigo-800 text-xs font-semibold mb-2 mr-2 p-2.5 py-0.5 rounded"
+                    >
+                      {node.topic.name}
+                    </span>
+                  );
+                })}
+              </aside>
             </aside>
             <div className="text-sm flex items-center pt-4">
               <span className="flex items-center pr-4">
