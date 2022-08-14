@@ -36,7 +36,10 @@
   - Accesibility
   - plus so much more
 - [React](https://reactjs.org/)
-  - It's react, not much else to say
+  - Components. Create once, use everywhere.
+  - Big time saver.
+  - Very large community, which means great support.
+  - There's nothing I can't figure out
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
   - Utility-first CSS framework
   - Less time thinking of class names, more time making progress.
@@ -59,6 +62,7 @@
       - PLEASEEEE make sure this file name is correct!
       - Otherwise the content will not load up when you search. (I came across this issue while testing.)
    - Update the content in the file to: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
+   - Replace PASTE_KEY_HERE with your Access Token.
    - Save
 1. Run `npm run dev`
 1. Finally, load up `http://localhost:3000` and have fun and enjoy the Github explorer!
