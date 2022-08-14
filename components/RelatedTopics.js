@@ -9,13 +9,13 @@ const RelatedTopics = (props) => {
             <h2>
               Related Topics for: <em>{props.topic.name}</em>
             </h2>
-            <p className="mt-1 text-sm font-normal text-gray-500 dark:text-gray-400">
+            <p className="mt-1 text-sm font-normal text-gray-500">
               Topics are labels that create subject-based connections between
               GitHub repositories and let you explore projects by type,
               technology, and so much more
             </p>
           </caption>
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+          <thead className="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
               <th scope="col" className="py-3 px-6">
                 Topics
@@ -28,12 +28,20 @@ const RelatedTopics = (props) => {
           <tbody>
             {props.topic.relatedTopics.map((topic) => {
               return (
-                <tr className="hover:bg-gray-50 bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <tr
+                  className="hover:bg-gray-50 bg-white border-b"
+                  key={topic.id}
+                >
                   <th
                     scope="row"
-                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap"
                   >
-                    {topic.name}
+                    <a
+                      className="text-blue-500"
+                      href={`/?queryString=${topic.name}`}
+                    >
+                      <u>{topic.name}</u>
+                    </a>
                   </th>
                   <td className="py-4 px-6">{topic.stargazerCount}</td>
                 </tr>

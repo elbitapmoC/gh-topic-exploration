@@ -1,4 +1,5 @@
 # GitHub Topic Explorer:
+
 ![Screen Shot 2022-08-12 at 3 03 29 PM](https://user-images.githubusercontent.com/11306948/184452481-cf388de0-cda8-4572-a636-95385cbfd0d2.png)
 
 ![Screen Shot 2022-08-12 at 5 21 10 AM](https://user-images.githubusercontent.com/11306948/184452506-e0f5960f-f8f1-4187-8d70-0b94f67462c9.png)
@@ -69,7 +70,7 @@
   - I'd like to use styled components for component specific styles
   - and Keep tailwind for those quick on the go class additions.
 - Additional Features (I'd like to recreate Github's full Explorer)
-  - Pagination (Resources below)
+  - Pagination (Resources below, maybe something to tackle later. For fun.)
     - https://stackoverflow.com/questions/48116781/github-api-v4-how-can-i-traverse-with-pagination-graphql
     - https://stackoverflow.com/questions/64115904/how-to-search-specific-page-through-github-api-v4
     - https://stackoverflow.com/questions/70136467/graphql-api-pagination-issue
@@ -84,4 +85,4 @@
   - Filtering by Languages
   - Add in micro-interactions
   - Themes to support different color schemes (light or dark)
-- More experimentation and deep dive learning on GraphQL.
+- Dive more into GraphQL 🤿
