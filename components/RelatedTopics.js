@@ -1,7 +1,6 @@
 import React from "react";
 
 const RelatedTopics = (props) => {
-  console.log({ props });
   return (
     <>
       <div className="max-w-2xl realtedTopics__table p-4 flex w-full mb-8">
@@ -19,10 +18,10 @@ const RelatedTopics = (props) => {
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               <th scope="col" className="py-3 px-6">
-                Topic
+                Topics
               </th>
               <th scope="col" className="py-3 px-6">
-                Stargazer
+                Stargazers
               </th>
             </tr>
           </thead>

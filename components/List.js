@@ -1,8 +1,6 @@
 import styles from "../styles/Home.module.css";
 
 const Lists = (prop) => {
-  console.log(prop);
-
   return (
     <article className={styles.grid}>
       {prop.repos.map((repo) => {
