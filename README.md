@@ -1,7 +1,5 @@
 # GitHub Topic Explorer:
-![screenshot](https://user-images.githubusercontent.com/11306948/184529316-912db160-cadd-4771-85df-77f118c7683e.jpg)
-
-![Screen Shot 2022-08-12 at 5 21 10 AM](https://user-images.githubusercontent.com/11306948/184452506-e0f5960f-f8f1-4187-8d70-0b94f67462c9.png)
+![ss](https://user-images.githubusercontent.com/11306948/184529340-c6be93c6-ce06-49d0-b50b-9f2a109d24c8.png)
 
 ## Assignment
 
