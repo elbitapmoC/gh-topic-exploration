@@ -1,4 +1,5 @@
 # GitHub Topic Explorer:
+
 ![ss](https://user-images.githubusercontent.com/11306948/184529340-c6be93c6-ce06-49d0-b50b-9f2a109d24c8.png)
 
 ## Assignment
@@ -45,9 +46,18 @@
   - Less time thinking of class names, more time making progress.
   - Lightweight because it's use what you need, it won't download everything from the framework.
   - Responsiveness
-  - I believe I have an eye for design. UI 👍
+  - UI 👍
   - Tested on multiple devices-- Windows Laptops & Macbooks, testing on local devices as well as mobile devices.
   - Had another developer test out on their device to see if the instructions were clear and if they had the same results as my local machine.
+  - Options for CSS--
+    - global style for everything..
+    - BEM, Atomic, ITCSS
+    - CSS Modules
+    - etc.
+    - Winner: Styled JSX.
+      - Setup for doing more programmatic things.
+      - Creating dynamic styles
+      - 😄 The medicine we want, no side effects (scope/component specific styles)
 
 ### How to run app & test
 
@@ -59,21 +69,18 @@
 1. Run `npm install`
 1. Create a .env file to access.
    - At the root create a file > name it: `.env.local`
-      - PLEASEEEE make sure this file name is correct!
-      - Otherwise the content will not load up when you search. (I came across this issue while testing.)
+     - PLEASEEEE make sure this file name is correct!
+     - Otherwise the content will not load up when you search. (I came across this issue while testing.)
    - Update the content in the file to: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
    - Replace PASTE_KEY_HERE with your Access Token.
    - Save
 1. Run `npm run dev`
 1. Finally, load up `http://localhost:3000` and have fun and enjoy the Github explorer!
 
-### Future Improvements
+### Future Improvements / Thoughts
 
-- Code Structuring
 - React -> Svelte
 - Refactoring
-  - I'd like to use styled components for component specific styles
-  - and Keep tailwind for those quick on the go class additions.
 - Additional Features (I'd like to recreate Github's full Explorer)
   - Pagination (Resources below, maybe something to tackle later. For fun.)
     - https://stackoverflow.com/questions/48116781/github-api-v4-how-can-i-traverse-with-pagination-graphql
@@ -90,4 +97,4 @@
   - Filtering by Languages
   - Add in micro-interactions
   - Themes to support different color schemes (light or dark)
-- Dive more into GraphQL 🤿
+- Dive more into GraphQL 🤿 & Apollo, fully fleshed out app idea.

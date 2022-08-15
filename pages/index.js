@@ -12,17 +12,6 @@ import client from "../graphql-client";
 export default function Home({ data, error }) {
   return (
     <>
-      {/* We've got a couple options for CSS-- 
-    - global style for everything..
-    - BEM
-    - CSS Modules
-    - Preprocessors like scss
-    - etc.
-    
-    We'll use Styled JSX. 
-    - Setup for do more programmatic things.
-    - Creating dynamic styles
-    - My favorite, scoped styles */}
       <style jsx>
         {`
           .main {
