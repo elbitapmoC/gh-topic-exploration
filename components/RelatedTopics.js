@@ -6,13 +6,13 @@ const RelatedTopics = (props) => {
       <div className="max-w-2xl realtedTopics__table p-4 flex w-full mb-8">
         <table className="w-full text-sm text-left text-gray-500">
           <caption className="mb-4 p-5 text-lg font-semibold text-left text-gray-900 bg-white">
-            <h2>
+            <h2 className="mb-2">
               Related Topics for: <em>{props.topic.name}</em>
             </h2>
-            <p>
+            <hr />
+            <p className="mt-1 text-sm bold text-gray-500">
               Stargazers: <em>{props.topic.stargazerCount}</em>
             </p>
-            <hr></hr>
             <p className="mt-1 text-sm font-normal text-gray-500">
               Topics designed for you! Creating connections between GitHub
               repositories. Explore projects by type, technology, and so much
@@ -22,7 +22,7 @@ const RelatedTopics = (props) => {
           <thead className="text-xs text-gray-700 uppercase bg-gray-50">
             <tr>
               <th scope="col" className="py-3 px-6">
-                Topics
+                Related Topics
               </th>
               <th scope="col" className="py-3 px-6">
                 Stargazers
