@@ -1,6 +1,6 @@
 # GitHub Topic Explorer:
 
-![Screenshot of Github Explorer](https://user-images.githubusercontent.com/11306948/184692739-4a962e8f-2d87-43fd-a242-5a3756604003.png)
+![Screenshot of Github Explorer](https://user-images.githubusercontent.com/11306948/184694467-8ce42f87-fba2-426b-8b1c-45d8569bc9fe.png)
 
 ## Assignment
 
