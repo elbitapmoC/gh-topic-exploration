@@ -1,4 +1,4 @@
-const Lists = (prop) => {
+const Lists = ({ repos }) => {
   return (
     <article className="grid">
       <style jsx>{`
@@ -51,7 +51,7 @@ const Lists = (prop) => {
         }
       `}</style>
 
-      {prop.repos.map((repo) => {
+      {repos.map((repo) => {
         return (
           <a
             href={repo.url}

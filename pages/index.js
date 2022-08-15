@@ -4,7 +4,6 @@ import Search from "../components/Search";
 import Title from "../components/Title";
 import List from "../components/List";
 import RelatedTopics from "../components/RelatedTopics";
-// import Pagination from "../components/Pagination";
 import ResultsBadge from "../components/ResultsBadge";
 import GET_REPOS_AND_TOPICS from "../queries/getGithubTopic";
 import client from "../graphql-client";
@@ -38,7 +37,6 @@ export default function Home({ data, error }) {
             <List repos={data.search.nodes} />
           </>
         )}
-        {/* <Pagination /> */}
       </main>
       <Footer />
     </>
