@@ -71,7 +71,7 @@
 1. (If you don't have [node](https://nodejs.org/en/download/), make sure to download it before going to the next step)
   - Restart your text editor once you've installed Node.
 1. Run `npm install`
-1. Create a .env.local file to make a query to the server.
+1. Create an `.env.local` file to make a query to the server.
    - At the root create a file & name it: `.env.local`
      - PLEASEEEE make sure this file name is correct!
      - Otherwise the content will not load up when you search. (I came across this issue while testing.)
