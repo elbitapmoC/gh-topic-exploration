@@ -29,7 +29,7 @@
 ## Dev Notes / What we used
 
 - [Apollo GraphQL](https://www.apollographql.com/)
-  - I'm a bit newer to this, GraphQL this seemed like the best fit for the ask.
+  - 
 - [NextJS](https://nextjs.org/)
   - Lots of features
   - Performance! Performance! Performance!
