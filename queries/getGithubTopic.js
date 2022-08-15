@@ -20,8 +20,10 @@ const GET_REPOS_AND_TOPICS = gql`
           description
           stargazerCount
           licenseInfo {
+            # MIT, CC0, etc.
             key
           }
+          # Each language has a unique color attached to it.
           primaryLanguage {
             name
             color
@@ -37,8 +39,10 @@ const GET_REPOS_AND_TOPICS = gql`
         }
       }
     }
+    # Gets topics related to what's typed above or the topic user clicks.
     topic(name: $queryString) {
       name
+      stargazerCount
       relatedTopics(first: 10) {
         id
         name

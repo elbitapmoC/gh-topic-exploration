@@ -1,21 +1,70 @@
-import styles from "../styles/Home.module.css";
-
 const Lists = (prop) => {
   return (
-    <article className={styles.grid}>
+    <article className="grid">
+      <style jsx>{`
+        .grid {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          max-width: 672px;
+          width: 100%;
+        }
+
+        .card {
+          position: relative;
+          margin: 1rem;
+          padding: 1.5rem;
+          text-align: left;
+          color: inherit;
+          text-decoration: none;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+          transition: color 0.15s ease, border-color 0.15s ease;
+          width: 100%;
+          min-height: 200px;
+          flex-grow: 1;
+        }
+
+        .card:hover {
+          color: #0070f3;
+          border-color: #0070f3;
+        }
+
+        .card h2 {
+          margin: 0 0 1rem 0;
+          font-size: 1.5rem;
+        }
+
+        .card p {
+          margin: 0;
+          font-size: 1.05rem;
+          line-height: 1.5;
+
+          /* Minimizes rows of text to 3 lines. */
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      `}</style>
+
       {prop.repos.map((repo) => {
         return (
           <a
             href={repo.url}
             target="_blank"
             rel="noreferrer"
-            className={`${styles.card} flex flex-col`}
+            className="card flex flex-col"
             key={repo.id}
           >
-            <aside className=" grow">
+            <aside className="grow">
               <h2 className="font-bold">{repo.name}</h2>
               <p className="pb-2">{repo.description}</p>
               <aside className="flex flex-wrap">
+                {/* Iterates through the different topics, for each topic, they'll get their own badge. */}
                 {repo.repositoryTopics?.nodes.map((node) => {
                   return (
                     <span
@@ -30,6 +79,8 @@ const Lists = (prop) => {
             </aside>
             <div className="text-sm flex items-center pt-4">
               <span className="flex items-center pr-4">
+                {/* We use svg here because Image doesn't allow us to add className's to it.
+                Becuase of this, the hover-effect didn't apply (where icon changes alongside the color of text within the card)*/}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5 mr-1"
@@ -47,6 +98,7 @@ const Lists = (prop) => {
                 {repo.stargazerCount}
               </span>
               <span className="flex items-center pr-4">
+                {/* There isn't a background color of undefine, we we check the parent, if it exists first. (referring to notes below)*/}
                 {repo.primaryLanguage && (
                   <span
                     className="w-5 h-5 mr-1 border-2 border-white rounded-full"
@@ -55,6 +107,10 @@ const Lists = (prop) => {
                 )}
                 <span>{repo.primaryLanguage?.name}</span>
               </span>
+              {/* Properties that do not exist, triggers an error at runtime.
+              We add in optional chaining (?).
+              If the parent property isn't defined, instead of throwing an error, 
+              it'll return undefined instead of throwing an error.*/}
               <span>{repo.licenseInfo?.key} license</span>
             </div>
           </a>

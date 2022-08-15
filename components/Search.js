@@ -1,27 +1,24 @@
 import React from "react";
+import Image from "next/image";
 
 const Search = () => {
   return (
-    <form className="flex items-center mb-16">
+    // Submitting the form, sends user input to server, which allows us to render the related topics and cards/items centered around what the user searched for.
+    <form className="flex items-center mb-12">
+      {/* Whenever we see, SR-ONLY, it means, Screen reader only */}
+      {/* htmlFor, script-accessible property used to set & read the value of the content property, which is the ID of the label's associated with the input below (control element)  */}
       <label htmlFor="simple-search" className="sr-only">
         Search topics and repos
       </label>
-      <div className="relative ">
+      <aside className="relative ">
         <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-5 h-5 text-gray-500"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-            />
-          </svg>
+          <Image
+            src="/icons/search_gray.svg"
+            alt="search icon, color: gray"
+            className="h-5 w-5"
+            width={15}
+            height={15}
+          />
         </div>
         <input
           name="queryString"
@@ -31,25 +28,13 @@ const Search = () => {
           placeholder="Search topics or repos"
           required=""
         />
-      </div>
+      </aside>
       <button
         type="submit"
-        className="p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
+        className="flex justify-between p-2.5 ml-2 text-sm font-medium text-white bg-blue-700 rounded-lg border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth="2"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
+        Submit
+        {/* Whenever we see, SR-ONLY, it means, Screen reader only */}
         <span className="sr-only">Search topics and repos</span>
       </button>
     </form>
