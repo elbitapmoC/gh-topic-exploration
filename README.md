@@ -36,13 +36,18 @@
   - Accesibility
   - plus so much more
 - [React](https://reactjs.org/)
-  - It's react, not much else to say
+  - Components. Create once, use everywhere.
+  - Big time saver.
+  - Very large community, which means great support.
+  - There's nothing I can't figure out
 - [Tailwind CSS](https://tailwindcss.com/docs/installation)
   - Utility-first CSS framework
   - Less time thinking of class names, more time making progress.
   - Lightweight because it's use what you need, it won't download everything from the framework.
   - Responsiveness
   - I believe I have an eye for design. UI 👍
+  - Tested on multiple devices-- Windows Laptops & Macbooks, testing on local devices as well as mobile devices.
+  - Had another developer test out on their device to see if the instructions were clear and if they had the same results as my local machine.
 
 ### How to run app & test
 
@@ -53,8 +58,11 @@
 1. Open project in terminal or text editor of choice.
 1. Run `npm install`
 1. Create a .env file to access.
-   - At the root create a file > name it: '.env.local'
-   - Update the content in the file to: `GITHUB_ACCESS_TOKEN = "PASTE KEY HERE"`
+   - At the root create a file > name it: `.env.local`
+      - PLEASEEEE make sure this file name is correct!
+      - Otherwise the content will not load up when you search. (I came across this issue while testing.)
+   - Update the content in the file to: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
+   - Replace PASTE_KEY_HERE with your Access Token.
    - Save
 1. Run `npm run dev`
 1. Finally, load up `http://localhost:3000` and have fun and enjoy the Github explorer!
