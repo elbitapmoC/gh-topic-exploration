@@ -69,6 +69,7 @@
 1. Clone the repo: `git clone git@github.com:elbitapmoC/gh-topic-exploration.git`
 1. cd into your cloned repo.
 1. (If you don't have [node](https://nodejs.org/en/download/), make sure to download it before going to the next step)
+  - Restart your text editor once you've installed Node.
 1. Run `npm install`
 1. Create a .env.local file to make a query to the server.
    - At the root create a file & name it: `.env.local`
