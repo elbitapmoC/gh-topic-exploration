@@ -29,7 +29,8 @@
 ## Dev Notes / What we used
 
 - [Apollo GraphQL](https://www.apollographql.com/)
-  - 
+  - Fixes the issue of over-fetching
+  - Fixes the issue of making multiple requests for multiple resources
 - [NextJS](https://nextjs.org/)
   - Lots of features
   - Performance! Performance! Performance!
