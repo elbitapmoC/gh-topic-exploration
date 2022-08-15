@@ -75,8 +75,8 @@
    - At the root create a file & name it: `.env.local`
      - PLEASEEEE make sure this file name is correct!
      - Otherwise the content will not load up when you search. (I came across this issue while testing.)
-   - Update the content in the file to: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
-   - Replace PASTE_KEY_HERE with your Access Token.
+   - Paste in the `.env.local` file: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
+   - **Replace PASTE_KEY_HERE with your Access Token.**
    - Save
 1. Run `npm run dev`
 1. Finally, load up `http://localhost:3000` and have fun and enjoy the Github explorer!
