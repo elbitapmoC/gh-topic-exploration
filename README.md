@@ -64,8 +64,7 @@
 ### How to run app & test
 
 1. Get your Github Token
-   - Profile > Settings > Developer Settings > Personal Access Token > Generate New Token > Give your Access Token a Name / Note (Up to you what you name it) > Enable: public_repo, user:email
-   - Generate Token, **MAKE SURE TO COPY your token!**
+   - Profile > Settings > Developer Settings > Personal Access Token > Generate New Token > Give your Access Token a Name / Note (Up to you what you name it) > Enable: public_repo, user:email > Generate Token, **MAKE SURE TO COPY your token, place it in a safe spot, for if you need to access it again.**
 1. Clone the repo: `git clone git@github.com:elbitapmoC/gh-topic-exploration.git`
 1. Open project in terminal or text editor of choice.
 1. Run `npm install`
