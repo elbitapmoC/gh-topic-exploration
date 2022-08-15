@@ -17,7 +17,7 @@
 ### Github GraphQL API requirements
 
 - [Github API key](https://docs.github.com/en/free-pro-team@latest/graphql/guides/forming-calls-with-graphql#authenticating-with-graphql)
-- Use the `.env` file within your app.
+- Use the `.env.local` file within your app.
 
 ### Evaluation:
 
@@ -47,8 +47,9 @@
   - Lightweight because it's use what you need, it won't download everything from the framework.
   - Responsiveness
   - UI 👍
+- Testing
   - Tested on multiple devices-- Windows Laptops & Macbooks, testing on local devices as well as mobile devices.
-  - Had another developer test out on their device to see if the instructions were clear and if they had the same results as my local machine.
+  - Had a few other developers test out on their device to see if the instructions were clear and if they had the same results as my local machine.
   - Options for CSS--
     - global style for everything..
     - BEM, Atomic, ITCSS
@@ -67,8 +68,8 @@
 1. Clone the repo: `git clone git@github.com:elbitapmoC/gh-topic-exploration.git`
 1. Open project in terminal or text editor of choice.
 1. Run `npm install`
-1. Create a .env file to access.
-   - At the root create a file > name it: `.env.local`
+1. Create a .env.local file to make a query to the server.
+   - At the root create a file & name it: `.env.local`
      - PLEASEEEE make sure this file name is correct!
      - Otherwise the content will not load up when you search. (I came across this issue while testing.)
    - Update the content in the file to: `GITHUB_ACCESS_TOKEN = PASTE_KEY_HERE`
